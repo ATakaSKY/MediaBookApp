@@ -1,3 +1,22 @@
-<p>
-  favorites works!
-</p>
+<div class="search">
+  <img src="assets/search.png" alt=""> <input (keyup)="searchBooks($event)" type="text" placeholder="search">
+</div>
+
+<h3 class="books-container">Favorites</h3>
+
+<div class="books books-container">
+  
+  <div class="book" *ngFor="let book of booksFiltered">
+    <div class="action-items">
+      <span class="deleteBook" (click)="removeFromFavorites(book.id)"><img src="assets/cancel.png" alt="delete"></span>
+    </div>
+    <div class="book-img">
+      <img src="assets/bookdummy.png" alt="bookImage">
+    </div>
+    <h3 class="bookName">{{book.bookName}}</h3>
+    <div class="book-details">
+      <span class="author">{{book.author}}</span>
+      <span>${{book.price}}</span>
+    </div>
+  </div>
+</div>

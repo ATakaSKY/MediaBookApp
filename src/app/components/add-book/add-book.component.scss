@@ -1,0 +1,71 @@
+.addbook{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.add-book-error{
+    color: orangered;
+}
+
+form{
+    padding:3rem;
+    padding-left:8rem;
+    padding-right:8rem;
+        box-shadow: 0 5px 5px rgba(0,0,0,.3),0 -2px 5px rgba(0,0,0,.3);
+    /* display: flex; */
+    /* flex-direction: column; */
+    width:600px;
+    /* justify-content: center; */
+    margin: 0 auto;
+    
+    & > *{
+        margin-bottom: 1.6rem;
+    }
+    
+    h1{
+        border-bottom: 1px solid #cdcdcd;
+        padding: 2rem;
+        text-align: center;
+    }
+    
+    input {
+        background: #cdcdcd;
+        padding: .8rem;
+    }
+    
+    .book-name{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .author{
+        display: flex;
+         flex-direction: column;
+    }
+    
+    .book-price{
+        display: flex;
+          flex-direction: column;
+    }
+    
+    .add-book-btn{
+        width: 100%;
+    padding: 1rem;
+    background: teal;
+    font-size: 1.2rem;
+    color: #fff;
+    cursor: pointer;
+    }
+}
+
+@media screen and (max-width:1050px){
+    
+    form{
+        width: 400px;
+    margin-bottom: 2rem;
+    }
+}
+
+    

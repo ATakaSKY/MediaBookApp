@@ -1,3 +1,23 @@
-<p>
-  navbar works!
-</p>
+<div class="navbar">
+  <div class="logo">
+    <img src="assets/logo.png" alt="logo">
+  </div>  
+  
+  <div class="nav-items">
+    <div class="nav-item">
+      <a routerLink="/addBook" routerLinkActive="router-link-active" ><img src="assets/books.png" />Add books</a>
+    </div>
+    <div class="nav-item">
+      <a routerLink="/booklist" routerLinkActive="router-link-active" ><img src="assets/addbooksdefault.png" />Book List</a>
+      <div class="book-list-number" *ngIf="bookCount !== 0">
+        {{bookCount}}
+      </div>
+    </div>
+    <div class="nav-item">
+      <a routerLink="/favorites" routerLinkActive="router-link-active" ><img src="assets/like.png" />Favorites</a>
+      <div class="favorites-number" *ngIf="favoritesCount !== 0">
+        {{favoritesCount}}
+      </div>
+    </div>
+  </div>
+</div>

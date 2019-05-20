@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    min-height: 100vh;
+    
+    app-navbar{
+        // flex:30%;
+        background: url(/assets/1907.png);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: 0% 15rem;
+    }
+    
+    main{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:850px){
+    .container{
+        flex-direction: column;
+        min-height: auto;
+    }
+    
+    app-navbar{
+        background: none !important;
+    }
+}

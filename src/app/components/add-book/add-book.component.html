@@ -1,3 +1,55 @@
-<p>
-  add-book works!
-</p>
+<div class="addbook">
+  
+ 
+  <form (submit)="onAddBook(addBookForm)" #addBookForm="ngForm">
+     <h1>Add Book</h1>
+  
+    <div class="book-name">
+      <label for="">Book Name</label>
+      <input
+        type="text"
+        name="bookName"
+        placeholder=""
+        ngModel
+        #bookName="ngModel"
+        required 
+        >
+      <div class="add-book-error" *ngIf="submitted && bookName.errors?.required">Please enter a book name.</div>
+    </div>
+
+    <div class="author">
+      <label for="">Author</label>
+      <input
+        type="text"
+        name="author"
+        placeholder=""
+        ngModel
+        #author="ngModel"
+        required
+        maxlength="50">
+      <div class="add-book-error" *ngIf="submitted && author.errors?.required">Please enter an author name.</div>
+    </div>
+    
+    <div class="book-price">
+      <label for="">Book Price</label>
+      <input
+        type="number"
+        name="bookPrice"
+        placeholder=""
+        ngModel
+        #bookPrice="ngModel"
+        required
+        >
+      <div class="add-book-error" *ngIf="submitted && bookPrice.errors?.required">Please enter a book price.</div>
+    </div>
+    
+    <button
+      class="add-book-btn"
+      type="submit">Submit</button>
+  </form>
+
+<!-- <div class="spinner" *ngIf="showSpinner"> 
+  <mat-spinner></mat-spinner>
+</div> -->
+
+</div>

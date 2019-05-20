@@ -1,0 +1,46 @@
+.navbar{
+    min-height: 100vh;
+    // background: url('/assets/1907.png');
+    height: 100%;
+    box-shadow: 0 0px 8px rgba(0,0,0,0.3);
+    padding: 2rem;
+    // padding-right: 5rem;
+    // padding-left: 5rem;
+    
+    .logo{
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    
+    .nav-items > div{
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        a{
+            text-decoration: none;
+            color: #8a7d7d;
+            font-size: 1.7rem;
+        }
+    }
+    
+    .favorites-number,.book-list-number{
+        border: 1px solid #cdcdcd;
+        border-radius: 13px;
+        padding: 5px;
+        margin-left: 6px;
+    }
+    
+}
+
+.router-link-active{
+    color:teal !important;
+}
+
+@media screen and (max-width:850px){
+    .navbar{
+    min-height: auto;
+    margin-bottom: 2rem;
+    }
+}
